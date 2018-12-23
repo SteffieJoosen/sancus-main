@@ -71,7 +71,7 @@ REMOTE_IS_SSH = $(shell git config --get remote.origin.url | grep "git@github.co
 
 sancus-compiler sancus-support sancus-examples:
 	git clone https://hanswinderix@github.com/hanswinderix/$@.git
-	git remote add upstream https://github.com/sancus-pma/$@.git
+	cd $@ && git remote add upstream https://github.com/sancus-pma/$@.git
 
 sancus-%:
 ifeq ($(REMOTE_IS_SSH), 1)
