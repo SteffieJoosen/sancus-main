@@ -69,7 +69,7 @@ clang-sancus: $(LLVM_PKG_DEB)
 # Sancus project GitHub repositories
 REMOTE_IS_SSH = $(shell git config --get remote.origin.url | grep "git@github.com" >/dev/null; echo $$?)
 
-sancus-compiler sancus-support:
+sancus-compiler sancus-support sancus-examples:
 	git clone https://hanswinderix@github.com/hanswinderix/$@.git
 	git remote add upstream https://github.com/sancus-pma/$@.git
 
