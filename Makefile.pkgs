@@ -62,7 +62,6 @@ ifeq ($(UBUNTU),1)
   endif
   endif
   endif
-  endif
 else
     $(error Unsupported OS: $(shell uname -v))
 endif
