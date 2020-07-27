@@ -75,9 +75,9 @@ sancus-compiler sancus-support sancus-examples:
 
 sancus-%:
 ifeq ($(REMOTE_IS_SSH), 1)
-	git clone https://github.com/sancus-pma/$@.git
+	git clone --recurse-submodules https://github.com/sancus-pma/$@.git
 else
-	git clone git@github.com:sancus-pma/$@.git
+	git clone --recurse-submodules git@github.com:sancus-pma/$@.git
 endif
 
 %-update: sancus-%
